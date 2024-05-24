@@ -22,7 +22,11 @@ const offerRoutes = require('./routes/offer.routes');
 app.use(userRoutes, offerRoutes);
 
 app.all('*', (req, res) => {
-  res.status(404).send('Page not fond');
+  res
+    .status(404)
+    .send(
+      "Page not fond but... Méthodologie, rigueur, pragmatisme et travail d'équipe sont les premières clés de réussite pour un développeur back-end."
+    );
 });
 
 app.listen(process.env.PORT, () => {
