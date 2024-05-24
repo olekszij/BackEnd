@@ -21,6 +21,10 @@ const offerRoutes = require('./routes/offer.routes');
 
 app.use(userRoutes, offerRoutes);
 
+app.get('/', function (req, res) {
+  res.json('Hello World!');
+});
+
 app.all('*', (req, res) => {
   res
     .status(404)
